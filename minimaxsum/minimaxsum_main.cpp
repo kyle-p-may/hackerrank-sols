@@ -1,13 +1,28 @@
 #include <bits/stdc++.h>
+#include <algorithm>
+#include <cstdint>
+#include <numeric>
 
 using namespace std;
 
 vector<string> split_string(string);
 
-// Complete the miniMaxSum function below.
-void miniMaxSum(vector<int> arr) {
+void miniMaxSum(vector<int> arr)
+{
+    int64_t s = 0;
+    for(auto a : arr) {
+        s += a;
+    }
 
+    int64_t maxi = s - arr[0];
+    int64_t mini = s - arr[0];
 
+    for (auto a : arr) {
+        maxi = std::max(s - a, maxi);
+        mini = std::min(s - a, mini);
+    }
+
+    std::cout << mini << " " << maxi << std::endl;
 }
 
 int main()

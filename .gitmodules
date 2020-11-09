@@ -1,0 +1,3 @@
+[submodule "buildinfra/subprocessmanagement"]
+	path = buildinfra/subprocessmanagement
+	url = git@github.com:kyle-p-may/subprocess-management.git
