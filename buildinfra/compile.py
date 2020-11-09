@@ -9,8 +9,8 @@ class Compile:
         self.cxx = "g++"
         self.output_dir = output_dir
         self.targets = dict()
-        self.flags = ["-std=c++17", "-Wall", "-Werror"]
-        self.include_dirs = []
+        self.flags = ["-std=c++17", "-Wall", "-Werror", "-g"]
+        self.include_dirs = [os.path.join(os.getcwd(), "common")]
         self.macros = []
 
     def RegisterTarget(self, target, dependencies):

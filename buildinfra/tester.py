@@ -15,6 +15,7 @@ class Tester:
 
     def __init__(self):
         self.compiler = bic.Compile()
+        self.compiler.RegisterMacro("DEBUG")
         self.tests = dict()
 
     def RegisterTest(self, test, dependencies, command_lines):
